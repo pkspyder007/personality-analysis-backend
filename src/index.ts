@@ -19,6 +19,11 @@ Object.values(routers).forEach(router => {
 });
 
 /* Start server to listen to requests */
+
+if(process.env.PORT) {
+    config.set("PORT", process.env.PORT);
+}
+
 app.init({
     port: config.get("PORT")
 });

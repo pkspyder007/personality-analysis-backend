@@ -20,7 +20,7 @@ class Config {
         const val: any = this._config[key] ?? null;
 
         if(!val) {
-            throw new Error("Config for key [${key}] not found");
+            throw new Error(`Config for key [${key}] not found`);
         }
 
         return val;
